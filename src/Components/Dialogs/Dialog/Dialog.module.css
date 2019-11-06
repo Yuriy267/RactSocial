@@ -1,0 +1,22 @@
+.image{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.item{
+    color: cornsilk;
+    text-decoration: none;
+    margin:auto;
+    margin-left: 10px;
+    white-space: nowrap
+}
+
+.dialog{
+    height: 40px;
+    display: flex;
+    
+}
+.active{
+    color: darkorange;
+}

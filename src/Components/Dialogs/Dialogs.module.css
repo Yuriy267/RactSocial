@@ -1,0 +1,26 @@
+.myDialogs {
+    background-color: greenyellow;
+    display: grid ;
+    grid-template-areas: 
+      "di mes" ;
+      grid-template-columns: 1fr 4fr;
+}
+
+.dialog {
+    grid-area: di;
+    padding: 20px ;
+    
+     
+    
+    
+    
+}
+
+.messages {
+    grid-area: mes;
+    bottom: 20px;
+    padding: 20px;
+    background-color: ghostwhite;
+    
+}
+ 

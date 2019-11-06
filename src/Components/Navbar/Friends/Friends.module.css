@@ -1,0 +1,16 @@
+
+
+.item {
+    float: left;
+    
+}
+
+/* a{
+    grid-area:h
+} */
+.image{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin: 5px 5px 0 0;
+}

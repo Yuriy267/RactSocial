@@ -1,0 +1,22 @@
+.navBar{
+    grid-area: n;
+    background-color: burlywood;
+    padding: 20px;
+    
+    }
+
+.item a {
+    color: white;
+    text-decoration: none ;
+    
+}
+
+.item a.activel{
+    color: rgb(253, 249, 8);
+    text-decoration: none ;
+    
+}
+.activel{
+    color: rgb(160, 160, 146);
+}
+
