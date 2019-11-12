@@ -9,8 +9,8 @@ const Friends = (props) => {
   <div className={sels.friends}>
      <div className={sels.headname}>My Friends</div> 
      <div className={sels.item}> 
-     {props.friends.dialogs.avatarData.map( di =>  <img className={sels.image} src={di.imgsrc} /> )} 
-     <img className={sels.image} src={props.avatar} />
+     {props.friends.map( di =>  <img className={sels.image} src={di.imgsrc} /> )} 
+    
      </div>
   </div>)
 }

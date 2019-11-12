@@ -13,12 +13,12 @@ const Dialogs = (props) => {
         <div className={sels.myDialogs}>
             <div className={sels.dialog}>
             
-                 {props.Hame.dialogs.dialogData.map( di => <Dialog id={di.id} Name={di.Name} avatar ={ props.Hame.dialogs.avatarData[di.id - 1].imgsrc} /> )} 
+                 {props.Hame.map( di => <Dialog id={di.id} Name={di.Name} avatar ={ props.avatar[di.id - 1].imgsrc} /> )} 
 
                 
             </div>
             <div className={sels.messages}>
-                 {props.Hame.dialogs.messageData.map( mes => (<Messages id={mes.id} Message={mes.Message}/>))}
+                 {props.message.map( mes => (<Messages id={mes.id} Message={mes.Message}/>))}
                 
             </div>
         </div>)

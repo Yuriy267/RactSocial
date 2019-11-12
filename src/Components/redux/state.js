@@ -1,3 +1,5 @@
+import { renderEntireTree } from '../../render';
+
 
 
 let state = {
@@ -9,7 +11,8 @@ let state = {
          { nam: 4, iSay: 'Go to sinema' },
          { nam: 5, iSay: 'Or on football' },
          { nam: 6, iSay: 'i get beer' }
-      ]
+      ],
+      newPostText:''
    },
 
    dialogs: {
@@ -41,6 +44,28 @@ let state = {
       ]
    
 }
+     
 }
+
+
+export let addPost = () =>{
+   
+   let fullPost = {
+      nam:7, iSay:state.myCont.newPostText
+   }
+      
+      state.myCont.postData.push(fullPost);
+      state.myCont.newPostText = '';
+      renderEntireTree(state)
+}
+
+export let newPostRedact = (valueCurr) => {
+   
+   state.myCont.newPostText = valueCurr;
+   
+   
+   renderEntireTree(state)
+}
+
 
 export default state;

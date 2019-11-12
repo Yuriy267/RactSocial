@@ -1,28 +1,47 @@
 import React from 'react';
 import sels from './Myposts.module.css';
-import Post from '../../Post/Post';
+import Post from './Post/Post';
 
 const Myposts = (props) => {
   
 
-    let postElem = props.posts.myCont.postData.map( postEm => (<Post id={postEm.nam} message={postEm.iSay}/>))
+    let postElem = props.posts.map( postEm => <Post id={postEm.nam} message={postEm.iSay}/>)
     
     let newPostElement = React.createRef();
-    let addPost = () => {
-      let text = newPostElement.current.value;
-      alert(text);
-}
-  return (
     
+    
+    let addButtonPost = () => {
+      
+      
+      props.addPost();
+      
+       };
+       
+       const changeNewPost = (event) => {
+        
+        props.newPostRedact(event.target.value);
+        
+        
+    };
+      
+     
+
+       return (
     <div className={sels.myPosts}>
       <div className="div">
-      <textarea ref = {newPostElement}></textarea>
-    </div>
+      <textarea onChange={changeNewPost} ref = {newPostElement} value ={props.postRed}/>
+      </div>
     <div className="div">
-      <button onClick={ addPost }>Add post</button>
+      <button onClick={addButtonPost}>Add post</button>
     </div>
       {postElem}
     </div>)
+  
 }
+
+  
+  
+    
+   
 
 export default Myposts

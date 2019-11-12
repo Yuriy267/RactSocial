@@ -12,7 +12,11 @@ const Mycontent = (props) => {
       
       <Profileinfo  />
       
-      <Myposts posts ={props.posts} />
+      <Myposts posts ={props.posts}
+                addPost={props.addPost}
+                postRed={props.postRed.newPostText}
+                newPostRedact={props.newPostRedact}
+      />
     </div>)
 }
 
